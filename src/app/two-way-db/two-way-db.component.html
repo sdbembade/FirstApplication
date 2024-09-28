@@ -1,0 +1,74 @@
+<h2>Assigment -1 Add,sub,multipy,divide with 3 input fields</h2>
+<div>
+<label for="id1">N1=</label>
+<input type="number" name="num" id="id1"[(ngModel)]="num1">
+</div>
+<br>
+<div>
+<label for="id2">N2=</label>
+<input type="number"  name="num" id="id2"[(ngModel)]="num2">
+</div>
+<br>
+<div>
+<button type ="button"(click)="add()">Add</button>
+<button type ="button"(click)="sub()">Substract</button>
+<button type ="button"(click)="multiply()">Multiply</button>
+<button type ="button"(click)="divide()">Divide</button>
+</div>
+<br>
+<div>
+<label for="id3">Result :</label>
+<input type="number" name="res" id="id3"[(ngModel)]="result" disabled>
+</div>
+<hr>
+<br>
+<h3> 4 input fields price,quantity,extra discount&total is disabled ,condition NO Button</h3>
+<div>
+    <label for="id4">Price=</label>
+    <input type="text" name="pPrice" id="id4"[(ngModel)]="price" (input)="totalP()">
+</div>
+<div>
+    <label for="id5">Quantity=</label>
+<input type="text" name="qty" id="id5"[(ngModel)]="quantity"(input)="totalP()">
+</div>
+<div>
+    <label for="id6">Discount=</label>
+<input type="text" name="pdiscount" id="id6"[(ngModel)]="discount"(input)="totalP()">
+</div>
+<div>
+ <label for="id7">Total Price=</label>
+<input type="text" name="Ptotal" id="id7" [(ngModel)]="totalPrice" disabled>
+</div>
+<br>
+<hr>
+<br>
+<h3> Age Calculation </h3>
+<div>
+<label for="id8">Name:</label>
+<input type="text" name="pName" id="id8" [(ngModel)]="name">
+<label for="id9">Mobile No.:</label>
+<input type="text" name="mobile" id="id9" [(ngModel)]="mobile">
+<label for="id10">Birth Date:</label>
+<input type="date" name="pdate" id="id10" [(ngModel)]="birthdate" (change)="calculatetheAge()">
+<label for="id11">Age:</label>
+<input type="text" name="page" id="id11" [(ngModel)]="age" (ngModelchange)="calculatetheAge()" disabled>
+</div>
+<hr>
+<hr>
+<br>
+
+<h3>Product Form ngmodel change</h3>
+<div>
+    <label for="id1">Price</label><br>
+    <input type="text" name="price" id="id1" [(ngModel)]="productObj.price" (ngModelChange)="calculateTotalPrice()">
+</div>
+<div>
+    <label for="id2">Quantity</label><br>
+    <input type="text" name="quantity" id="id2" [(ngModel)]="productObj.quantity" (ngModelChange)="calculateTotalPrice()">
+</div>
+<div>
+    <label for="id3">Total Price</label><br>
+    <input type="text" name="totPrice" id="id3" disabled [(ngModel)]="productObj.totalPrice">
+</div>
+<button type="button" (click)="saveProduct()">Save</button>
+

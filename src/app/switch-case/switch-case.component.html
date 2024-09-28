@@ -1,0 +1,27 @@
+<h3>switch-case example</h3>
+
+<button type="button" (click)="updateStatus('pending')">Pending</button>&nbsp;
+<button type="button" (click)="updateStatus('delivered')">Delivered</button>&nbsp;
+<button type="button" (click)="updateStatus('shipped')">Shipped</button>&nbsp;
+
+<div class="container border" [ngSwitch]="orderStatus">
+    
+    <div *ngSwitchCase="'pending'">
+        <h6>Your Order is Pending</h6>
+    </div>
+    <div *ngSwitchCase="'processed'">
+        <h6>Your Order is being Processed</h6>
+    </div>
+    <div *ngSwitchCase="'shipped'">
+        <h6>Your Order has been Shipped</h6>
+    </div>
+    <div *ngSwitchCase="'delivered'">
+        <h6>Your Order has been Delivered</h6>
+    <div *ngSwitchCase="'cancelled'">
+        <h6>Your Order has been Cancelled</h6>
+    </div>
+<div *ngSwitchCaseDefault>
+    <h6>Unknown Status</h6>
+</div>
+    
+</div>

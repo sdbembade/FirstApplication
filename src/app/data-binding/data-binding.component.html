@@ -1,0 +1,62 @@
+<h1>Registration</h1>
+<p>Username:{{Username}}</p>
+<p>Email id:{{UseremailId}}</p>
+<p>Employee Name:{{Employeedeatails.Name}}</p>
+
+<p>Skills are:{{Employeedeatails.Skills[2]}}</p>
+
+<img [src]="imgPath" height="200"width="200">
+<br>
+<br>
+
+<button type= "Submit" [disabled]="isDisabled" >Save</button>
+
+<button type="submit"disabled={{isDisabled}}>Submit</button>
+
+<p> {{6+2}}</p>
+
+
+<button type="button"(click)="btnclick()">Click here</button>
+<br>
+<button type="button"(click)="increment()">Increment</button>
+<span class="demo">{{counter}}</span>
+<button type="button"(click)="decrement()">Decrement</button>
+<br>
+<br>
+<label for="id1">First Name:</label>
+<!-- <input type="text" name="fName" id="id1"(change)="modifyFName()"> -->
+<input type="text" name="fName" id="id1"(change)="modifyName($event)">
+<label for="id2">Middle Name:</label>
+<input type="text" name="MName" id="id2"(change)="modifymiddle($event)">
+<label for="id3">Last Name:</label>
+<input type="text" name="LName" id="id3"(change)="modifylast($event)">
+
+<br>
+
+<p class="container">Full Name :{{firstName}} {{middleName}} {{LastName}}</p>
+<br>
+ <label for="id4">Price:</label>
+<input type="number" name="Pprice" id="id4"(change)="modifyprice($event)">
+<br>
+<br>
+<label for="id5">Quantity:</label>
+<input type="number" name="Qqty" id="id5"(change)="modifyquantity($event)">
+<br>
+<br>
+ <button type="button"(click)="btn()">Total Price</button>  
+ <h3>Total Price: {{totalPrice}}</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,90 @@
+
+<h2> Structural Directive :- *ngFor</h2>
+<br>
+<br>
+
+<!-- <select class="form-control">
+  <option *ngFor="let option of options" [value]='option.value' 
+  [selected]="option.value=== nrSelect">{{option.label}}
+  </option>
+</select> -->
+<!-- <h3>List of Courses:-</h3> 
+ 
+
+<ul>
+  
+    <li *ngFor="let item of courses">{{item}}</li>
+    
+</ul>
+<ul>
+    <li *ngFor="let item of courses let i=index">{{i}}-{{item}}</li>
+</ul> -->
+
+
+<!-- <br> 
+ <hr> -->
+<div class="container">
+<table class="table table-bordered text-center">
+    <thead>
+      <tr>
+        <th scope="col">Sr</th>
+        <th scope="col">Product</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products;let i=index;let f=first" [ngClass]="{'bg-primary':f}">
+        <th> {{i+1}}</th> 
+        <td>{{product.productName}} </td>
+        <td>{{product.price}}</td>
+        <td>{{product.quantity}}</td>
+        </tr> 
+       <tr *ngFor="let product of products;let i=index;let f=first" [ngStyle]="{'background-color':product.price >60000 ? 'blue' : 'red'}">
+          <th> {{i+1}}</th> 
+          <td>{{product.productName}} </td>
+          <td>{{product.price}}</td>
+          <td>{{product.quantity}}</td>
+          </tr> 
+       <ng-container *ngFor="let product of products;let i=index">
+        <tr *ngIf="product.price <=60000">
+        <th>{{i+1}}</th>
+        <td>{{product.productName}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.quantity}}</td>
+      </tr>
+      </ng-container> 
+      
+    </tbody>
+  </table>
+</div> 
+
+
+<h2>table details</h2>
+<div class="container">
+  <table class="table table-bordered">
+      <thead>
+          <tr>
+              <th scope="col">Sr No</th>
+              <th scope="col">Product Name</th>
+              <th scope="col">Price</th>
+              <th scope="col">Quantity</th>
+          </tr>
+      </thead>
+      <tbody >
+       <tr  *ngFor="let product of products;let i=index;let f=first" [ngClass]="{'bg-demo':i==0,'bg-secondary':product.quantity > 2}">
+          <th>{{i+1}}</th>
+          <td>{{product.productName}}</td>
+          <td>{{product.price}}</td>
+          <td>{{product.quantity}}</td>
+        </tr>  
+         <tr *ngFor="let product of products;let i=index;let f=first" [ngStyle]="{'background-color':product.price >60000 ? 'gray' : 'yellow'}">
+          <th>{{i+1}}</th>
+          <td>{{product.productName}}</td>
+          <td>{{product.price}}</td>
+          <td>{{product.quantity}}</td>
+        </tr> 
+        
+      </tbody>
+  </table>
+</div>
