@@ -8,11 +8,12 @@ import { HeaderComponent } from './header/header.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { TwoWayDbComponent } from './two-way-db/two-way-db.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DirectiveExampleComponent } from './directive-example/directive-example.component';
 import { StructuralDirectiveComponent } from './structural-directive/structural-directive.component';
 import { SwitchCaseComponent } from './switch-case/switch-case.component';
 import { StructuralltaskComponent } from './structuralltask/structuralltask.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +26,14 @@ import { StructuralltaskComponent } from './structuralltask/structuralltask.comp
     DirectiveExampleComponent,
     StructuralDirectiveComponent,
     SwitchCaseComponent,
-    StructuralltaskComponent
+    StructuralltaskComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
